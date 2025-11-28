@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtherLottery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-5">
+            <h1 class="display-3">EtherLottery</h1>
+            <p class="lead">Try your luck and win the jackpot!</p>
+        </header>
+
+        <div id="connectWallet" class="text-center mb-4">
+            <button id="connectButton" class="btn btn-primary btn-lg">Connect Wallet</button>
+        </div>
+
+        <div id="lotteryInfo" class="row mb-5 d-none">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Current Round</div>
+                    <div class="card-body">
+                        <h2 id="currentRound">-</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Jackpot</div>
+                    <div class="card-body">
+                        <h2 id="currentPot">-</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-header">Time Remaining</div>
+                    <div class="card-body">
+                        <h2 id="remainingTime">-</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ticketPurchase" class="text-center mb-5 d-none">
+            <h3>Buy Lottery Tickets</h3>
+            <p>Each ticket costs <span id="ticketPrice">-</span> ETH</p>
+            <div class="input-group mb-3 w-50 mx-auto">
+                <input type="number" id="ticketAmount" class="form-control" value="1" min="1">
+                <button id="buyButton" class="btn btn-success">Buy Tickets</button>
+            </div>
+        </div>
+
+        <div id="userTickets" class="mb-5 d-none">
+            <h3 class="text-center">Your Tickets</h3>
+            <div id="ticketsList" class="row"></div>
+        </div>
+
+        <div id="adminPanel" class="mb-5 d-none">
+            <h3 class="text-center">Admin Panel</h3>
+            <div class="d-flex justify-content-center gap-3">
+                <button id="startLotteryButton" class="btn btn-warning">Start Lottery</button>
+                <button id="drawLotteryButton" class="btn btn-danger">Draw Winner</button>
+            </div>
+        </div>
+
+        <div id="previousWinners" class="mb-5 d-none">
+            <h3 class="text-center">Previous Winners</h3>
+            <div class="card">
+                <div class="card-body">
+                    <p>Last Winner: <span id="lastWinner">-</span></p>
+                    <p>Prize Amount: <span id="lastWinAmount">-</span> ETH</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 text-muted">
+        <p>EtherLottery &copy; 2023 - Decentralized Lottery on Ethereum</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

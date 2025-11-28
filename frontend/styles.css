@@ -1,0 +1,98 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.ticket-card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background-color: #6e8efb;
+    border-color: #6e8efb;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+#connectButton {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#lotteryInfo .card-header {
+    font-weight: bold;
+    background-color: #6e8efb;
+    color: white;
+}
+
+#lotteryInfo .card-body h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+#ticketsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.ticket-item {
+    flex: 0 0 200px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-item h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 3rem;
+    border-top: 1px solid #dee2e6;
+}
